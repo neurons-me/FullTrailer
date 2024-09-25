@@ -7,7 +7,15 @@ const PORT = 9000;
 app.use((req, res, next) => {
     const domain = req.headers.host; // Obtiene el dominio desde el request
 
-    // Lógica para redirigir a diferentes secciones según el dominio
+/*
+rafagas.com.mx - squarespace
+fulltrailer.com.mx - squarespace
+metro-bus.mx - squarespace
+hyundaisureste.mx - squarespace
+hyundai.space - squarespace
+*/
+
+// Lógica para redirigir a diferentes secciones según el dominio
     switch (domain) {
         case 'rafagas.com.mx':
             // Redirigir a la sección específica para rafagas.com.mx
@@ -22,6 +30,10 @@ app.use((req, res, next) => {
             res.redirect('/metrobus');
             break;
         case 'hyundai.space':
+            // Redirigir a la sección de Hyundai
+            res.redirect('/hyundai');
+            break;
+        case 'hyundaisureste.mx':
             // Redirigir a la sección de Hyundai
             res.redirect('/hyundai');
             break;
