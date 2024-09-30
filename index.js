@@ -1,7 +1,7 @@
 // apps/fulltrailer/index.js - Aplicación FullTrailer que maneja múltiples dominios
 const express = require('express');
 const app = express();
-const PORT = 9000;
+const PORT = process.env.PORT || 9003;
 
 // Middleware para manejar las rutas basadas en el dominio de origen
 app.use((req, res, next) => {
